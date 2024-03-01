@@ -476,6 +476,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedUnit: {fileID: 532031237}
+  unitLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!4 &451290840
 Transform:
   m_ObjectHideFlags: 0
