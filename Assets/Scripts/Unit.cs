@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour
 
     private float moveSpeed = 4f;
     private float stoppingDistance = 0.1f;
+    private float rotationSpeed = 10f;
     private Vector3 targetPosition;
 
 
@@ -17,6 +18,8 @@ public class Unit : MonoBehaviour
         {
             Vector3 moveDirection = (targetPosition - transform.position).normalized;
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
+            transform.forward = Vector3.Lerp(transform.forward, moveDirection, Time.deltaTime * rotationSpeed);
 
             unitAnimator.SetBool("IsWalking", true);
         }
