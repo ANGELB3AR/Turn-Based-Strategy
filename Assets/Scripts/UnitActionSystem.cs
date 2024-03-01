@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class UnitActionSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Unit selectedUnit;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            selectedUnit.Move(MouseWorld.GetPosition());
+        }
     }
 }
